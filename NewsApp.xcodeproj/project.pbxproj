@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		93EACF2221A2A92A00790C39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EACF2121A2A92A00790C39 /* AppDelegate.swift */; };
-		93EACF2421A2A92A00790C39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EACF2321A2A92A00790C39 /* ViewController.swift */; };
-		93EACF2721A2A92A00790C39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93EACF2521A2A92A00790C39 /* Main.storyboard */; };
 		93EACF2921A2A92B00790C39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93EACF2821A2A92B00790C39 /* Assets.xcassets */; };
 		93EACF2C21A2A92B00790C39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93EACF2A21A2A92B00790C39 /* LaunchScreen.storyboard */; };
+		93EACF3421A2AAE500790C39 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EACF3321A2AAE500790C39 /* NewsTableViewController.swift */; };
+		93EACF3721A2EA2B00790C39 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EACF3621A2EA2B00790C39 /* WebKit.framework */; };
+		93EACF3A21A2EA6600790C39 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EACF3821A2EA6600790C39 /* NewsDetailViewController.swift */; };
+		93EACF3B21A2EA6600790C39 /* NewsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93EACF3921A2EA6600790C39 /* NewsDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		93EACF1E21A2A92A00790C39 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93EACF2121A2A92A00790C39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		93EACF2321A2A92A00790C39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		93EACF2621A2A92A00790C39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93EACF2821A2A92B00790C39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93EACF2B21A2A92B00790C39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93EACF2D21A2A92B00790C39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93EACF3321A2AAE500790C39 /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		93EACF3621A2EA2B00790C39 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		93EACF3821A2EA6600790C39 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		93EACF3921A2EA6600790C39 /* NewsDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93EACF3721A2EA2B00790C39 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,7 @@
 			children = (
 				93EACF2021A2A92A00790C39 /* NewsApp */,
 				93EACF1F21A2A92A00790C39 /* Products */,
+				93EACF3521A2EA2B00790C39 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +61,22 @@
 			isa = PBXGroup;
 			children = (
 				93EACF2121A2A92A00790C39 /* AppDelegate.swift */,
-				93EACF2321A2A92A00790C39 /* ViewController.swift */,
-				93EACF2521A2A92A00790C39 /* Main.storyboard */,
 				93EACF2821A2A92B00790C39 /* Assets.xcassets */,
 				93EACF2A21A2A92B00790C39 /* LaunchScreen.storyboard */,
 				93EACF2D21A2A92B00790C39 /* Info.plist */,
+				93EACF3321A2AAE500790C39 /* NewsTableViewController.swift */,
+				93EACF3821A2EA6600790C39 /* NewsDetailViewController.swift */,
+				93EACF3921A2EA6600790C39 /* NewsDetailViewController.xib */,
 			);
 			path = NewsApp;
+			sourceTree = "<group>";
+		};
+		93EACF3521A2EA2B00790C39 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93EACF3621A2EA2B00790C39 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +137,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93EACF3B21A2EA6600790C39 /* NewsDetailViewController.xib in Resources */,
 				93EACF2C21A2A92B00790C39 /* LaunchScreen.storyboard in Resources */,
 				93EACF2921A2A92B00790C39 /* Assets.xcassets in Resources */,
-				93EACF2721A2A92A00790C39 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +150,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93EACF2421A2A92A00790C39 /* ViewController.swift in Sources */,
+				93EACF3A21A2EA6600790C39 /* NewsDetailViewController.swift in Sources */,
+				93EACF3421A2AAE500790C39 /* NewsTableViewController.swift in Sources */,
 				93EACF2221A2A92A00790C39 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,14 +159,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		93EACF2521A2A92A00790C39 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				93EACF2621A2A92A00790C39 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		93EACF2A21A2A92B00790C39 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

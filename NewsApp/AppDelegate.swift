@@ -15,7 +15,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         // Override point for customization after application launch.
+        var newsVC:NewsTableViewController = NewsTableViewController();
+        newsVC.title = "News"
+        
+        var navigationVC:UINavigationController = UINavigationController(rootViewController: newsVC);
+        
+        let frame = UIScreen.main.bounds
+        window = UIWindow(frame: frame)
+        
+        window!.rootViewController = navigationVC
+        window!.makeKeyAndVisible()
+        
         return true
     }
 

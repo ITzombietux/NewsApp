@@ -13,11 +13,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsDetailViewController" customModule="NewsApp" customModuleProvider="target">
             <connections>
                 <outlet property="authorLabel" destination="vVA-pi-8ij" id="uJU-eW-MsX"/>
-                <outlet property="heightConstraint" destination="m1B-u5-JXb" id="6Na-ZZ-unf"/>
+                <outlet property="heightConstraint" destination="5Ly-P6-4aE" id="Gxz-dk-Hfu"/>
                 <outlet property="imageView" destination="CTN-t4-G6R" id="fSt-cg-KRY"/>
                 <outlet property="titleLabel" destination="quv-Jc-wgq" id="6Vy-jx-5zl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outlet property="webView" destination="6cG-GN-hEb" id="daR-6v-rWs"/>
+                <outlet property="webView" destination="6cG-GN-hEb" id="uXk-hi-Msc"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

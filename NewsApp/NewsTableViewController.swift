@@ -66,6 +66,9 @@ class NewsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var detailVC = NewsDetailViewController(nibName: "NewsDetailViewController", bundle: nil)
         
+        detailVC.title = titles[indexPath.row]
+        detailVC.author = authors[indexPath.row]
+        
         navigationController?.pushViewController(detailVC, animated: true)
     }
 }

@@ -31,6 +31,7 @@ class NewsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        API.sharedInstance.requestArticles()
         
     }
 

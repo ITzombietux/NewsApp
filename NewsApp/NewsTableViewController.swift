@@ -10,29 +10,24 @@ import UIKit
 
 class NewsTableViewController: UITableViewController {
 
-    var titles:[String] = [
-        "New York Lakers Score Again!",
-        "Apple Presents New iWatch",
-        "Deeplink.me Wants To Break Open App Discovery",
-        "Silly Cat Attempts Jump And Hits Air",
-        "New MacBook Air So Thin People Can't See It",
-        "Higgs-Boson Finally Discovered In Scientists Coat"
-    ]
-    
-    var authors:[String] = [
-        "Bob",
-        "Alice",
-        "Reinder",
-        "zombietux",
-        "Ford",
-        "Zaphod"
-    ]
+    var articles:[Article] = [Article]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(onArticlesReceived(notification:)), name: API.articlesReceiveNotification, object: nil)
 
         API.sharedInstance.requestArticles()
         
+    }
+    
+    @objc func onArticlesReceived(notification:Notification)
+    {
+        if let articles:[Article] = notification.object as? [Article]
+        {
+            self.articles = articles
+            self.tableView.reloadData()
+        }
     }
 
     // MARK: - Table view data source
@@ -44,7 +39,7 @@ class NewsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return titles.count
+        return articles.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -58,8 +53,9 @@ class NewsTableViewController: UITableViewController {
             cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "cellIdentifier")
         }
         
-        cell!.textLabel?.text = titles[indexPath.row]
-        cell!.detailTextLabel?.text = authors[indexPath.row]
+        if let article:Article = articles[indexPath.row] {
+            cell!.textLabel?.text = article.title
+            cell!.detailTextLabel?.text = article.excerpt        }
         
         return cell!
     }
@@ -67,8 +63,8 @@ class NewsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var detailVC = NewsDetailViewController(nibName: "NewsDetailViewController", bundle: nil)
         
-        detailVC.title = titles[indexPath.row]
-        detailVC.author = authors[indexPath.row]
+//            detailVC.title = titles[indexPath.row]
+//            detailVC.author = authors[indexPath.row]
         
         navigationController?.pushViewController(detailVC, animated: true)
     }
